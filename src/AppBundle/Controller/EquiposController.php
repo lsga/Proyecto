@@ -13,7 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 class EquiposController extends Controller
 {
     /**
-     * @Route("/", name="Equipos")
+     * @Route("/equipos", name="Equipos")
      */
     public function listAction()
     {

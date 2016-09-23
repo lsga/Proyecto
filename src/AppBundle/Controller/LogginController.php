@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class LogginController extends Controller
 {
     /**
-     * @Route("/loggin", name="ingresar")
+     * @Route("/", name="ingresar")
      */
     public function LogginAction(Request $request){
 
@@ -27,8 +27,9 @@ class LogginController extends Controller
         }
       }
       else {
-        return $this->render('default/index.html.twig');
+        return $this->render('base.html.twig');
       }
-      return $this->render('base.html.twig');
+
+        return $this->render('base.html.twig');
     }
 }
