@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2 class="page-header">Todos Los Equipos</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Equipo</th>
+        <th>Categoria</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for equipo in equipos %}
+      <tr>
+          <td>{{equipo.Nombre}}</td>
+          <td>{{equipo.Categoria}}</td>
+          <td>
+            <a href="/equipos/lista/{{equipo.id}}" class="btn btn-success">
+            Ver
+            </a>
+            <a href="/equipos/editar/{{equipo.id}}" class="btn btn-default">
+            Editar
+            </a>
+            <a href="/equipos/eliminar/{{equipo.id}}" class="btn btn-danger">
+            eliminar
+            </a>
+          </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
