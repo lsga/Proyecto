@@ -29,5 +29,6 @@ class LogginController extends Controller
       else {
         return $this->render('default/index.html.twig');
       }
+      return $this->render('base.html.twig');
     }
 }
