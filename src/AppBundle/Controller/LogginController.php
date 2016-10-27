@@ -24,12 +24,12 @@ class LogginController extends Controller
 
         if ($us) {
           return $this->render('Loggin/index.html.twig', array('user' =>$us));
-        }
+        }else {
+            return $this->render('base.html.twig');
+          }
       }
       else {
         return $this->render('base.html.twig');
       }
-
-        return $this->render('base.html.twig');
     }
 }
