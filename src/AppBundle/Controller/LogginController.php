@@ -32,4 +32,10 @@ class LogginController extends Controller
         return $this->render('base.html.twig');
       }
     }
+    /**
+     * @Route("/home", name="Recargar")
+     */
+    public function RecargarAction(Request $request){
+      return $this->render('Loggin/index.html.twig');
+    }
 }

@@ -1,0 +1,33 @@
+{% extends 'Loggin/index.html.twig' %}
+
+{% block body %}
+<h2 class="page-header">Todos los Usuarios</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for usuario in usuarios %}
+      <tr>
+          <td>{{usuario.Nombre}}</td>
+          <td>{{usuario.Apellido}}</td>
+          <td>
+            <a href="/usuarios/listar/{{usuario.id}}" class="btn btn-success">
+            Ver
+            </a>
+            <a href="/usuarios/editar/{{usuario.id}}" class="btn btn-default">
+            Editar
+            </a>
+            <a href="/usuarios/eliminar/{{usuario.id}}" class="btn btn-danger">
+            Eliminar
+            </a>
+          </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
