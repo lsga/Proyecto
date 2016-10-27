@@ -1,0 +1,31 @@
+{% extends 'Loggin/index.html.twig' %}
+
+{% block body %}
+<h2 class="page-header">Todas las Canchas</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for cancha in canchas %}
+      <tr>
+          <td>{{cancha.Nombre}}</td>
+          <td>
+            <a href="/canchas/detalle/{{cancha.id}}" class="btn btn-success">
+            Ver
+            </a>
+            <a href="/canchas/editar/{{cancha.id}}" class="btn btn-default">
+            Editar
+            </a>
+            <a href="/canchas/eliminar/{{cancha.id}}" class="btn btn-danger">
+            Eliminar
+            </a>
+          </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
