@@ -35,6 +35,18 @@ class Partidos
      */
     private $equipo2;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Cancha", type="string", length=50)
+     */
+    private $cancha;
+    /*
+    * @var int
+    *
+    * @ORM\Column(name="ModuloHora", type="integer")
+     */
+    private $mh;
 
     /**
      * Get id
@@ -92,5 +104,44 @@ class Partidos
     public function getEquipo2()
     {
         return $this->equipo2;
+    }
+
+    /**
+     * Set cancha
+     *
+     * @param string $cancha
+     *
+     * @return Partidos
+     */
+    public function setCancha($cancha)
+    {
+        $this->cancha = $cancha;
+
+        return $this;
+    }
+
+    /**
+     * Get cancha
+     *
+     * @return string
+     */
+    public function getCancha()
+    {
+        return $this->cancha;
+    }
+
+    /**
+     * Get modulohora
+     *
+     * @return int
+     */
+    public function getModuloHora()
+    {
+        return $this->moduloHora;
+    }
+
+    public function toString()
+    {
+        return $this->cancha;
     }
 }

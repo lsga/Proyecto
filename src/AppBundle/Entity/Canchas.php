@@ -125,4 +125,3 @@ class Canchas
         return $this->ubicacion;
     }
 }
-
